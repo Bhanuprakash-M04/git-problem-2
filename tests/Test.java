@@ -1,4 +1,5 @@
 package tests;
+
 import solutions.Solution;
 
 public class Test {
@@ -15,13 +16,17 @@ public class Test {
         if (!runTest(new int[]{7,6,5,4,3,2,1}, 5, 3)) fails++;
 
         if (fails > 0) {
+            System.out.println("❌ Some tests failed.");
             System.exit(1); // Fail the CI job
+        } else {
+            System.out.println("✅ All tests passed.");
         }
     }
 
     public static boolean runTest(int[] nums, int k, int expected) {
         Solution sol = new Solution();
         int result = sol.findKthLargest(nums, k);
+        System.out.println("Input: k = " + k + ", nums = " + java.util.Arrays.toString(nums));
         System.out.println("Expected: " + expected + ", Got: " + result);
         return result == expected;
     }
