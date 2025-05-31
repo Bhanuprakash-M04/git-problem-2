@@ -1,4 +1,6 @@
-__package__="solutions"
+# solutions/solution.py
+from typing import List
+
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         nums.sort()
