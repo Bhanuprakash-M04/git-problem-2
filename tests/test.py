@@ -1,4 +1,9 @@
-# tests/test.py
+import sys
+import os
+
+# Add root directory to sys.path to recognize 'solutions' as a module
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from solutions.solution import Solution
 
 def run_test(nums, k, expected):
