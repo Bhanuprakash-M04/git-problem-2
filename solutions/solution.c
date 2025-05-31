@@ -4,5 +4,5 @@
 #include <limits.h>
 int findKthLargest(int *nums, int numsSize, int k)
 {
-    return 0;
+    // write your code here
 }
